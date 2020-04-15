@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "../node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "../node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "backOffice-angular-app"
+    }
+  },
+  "defaultProject": "backOffice-angular-app",
+  "cli": {
+    "analytics": "fdc40295-5abd-4fde-81ec-ae5ee6cbfdbf"
+  }
 }
