@@ -19,7 +19,6 @@ export class CreateAdministratorComponent implements OnInit {
   createForm: FormGroup;
   list: School[] = [];
   listSubscription: Subscription;
-  school: School;
 
   constructor(public administratorService: AdministratorService,
               public schoolService: SchoolService,

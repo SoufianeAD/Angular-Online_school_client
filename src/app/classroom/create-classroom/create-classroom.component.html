@@ -1,0 +1,27 @@
+<div class="container col-md-6 mx-auto mt-5 ">
+  <h3>Create Classroom</h3>
+  <form style="margin-top: 5%;" class="p-3" [formGroup]="createForm" (submit)="onSubmit()">
+
+    <div class="from-group">
+      <label>Titre</label>
+      <input type="text" class="form-control" formControlName="title">
+    </div>
+
+    <div class="from-group">
+      <label>Niveau</label>
+      <input type="text" class="form-control" formControlName="level">
+    </div>
+
+    <div class="from-group">
+      <label>Ecole</label>
+      <select  class="form-control" formControlName="school">
+        <option *ngFor="let item of list;" [ngValue]="item" >{{ item.name }}</option>
+      </select>
+    </div>
+
+    <div class="text-center" style="margin: 10px;">
+      <button class="btn btn-primary" type="submit">Save</button>
+    </div>
+
+  </form>
+</div>

@@ -17,6 +17,8 @@ import { ListAdministratorComponent } from './administrator/list-administrator/l
 import { CreateAdministratorComponent } from './administrator/create-administrator/create-administrator.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
+import { CreateClassroomComponent } from './classroom/create-classroom/create-classroom.component';
+import { ListClassroomComponent } from './classroom/list-classroom/list-classroom.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {HttpClientModule} from "@angular/common/http";
     CreateSchoolComponent,
     ListSchoolComponent,
     ListAdministratorComponent,
-    CreateAdministratorComponent
+    CreateAdministratorComponent,
+    CreateClassroomComponent,
+    ListClassroomComponent,
   ],
   imports: [
     BrowserModule,
