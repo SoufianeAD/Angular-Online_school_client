@@ -51,19 +51,26 @@ export class SchoolService {
     return school;
   }
   deleteSchool(id: ObjectID) {
-    const index = this.schools.indexOf(this.getSchoolById(id));
+    return this.http.post<any>('http://localhost:8080/converter/toHexString', id).subscribe(
+      (data) => {
+        alert(data.toString());
+      }, error => {
+        alert('error : ' + error.toString());
+      }
+    );
+    /*const index = this.schools.indexOf(this.getSchoolById(id));
     this.schools.splice(index, 1);
     this.emitSchoolSubject();
-    this.http.delete(this.url + '/delete/' + id)
+    this.http.post(this.url + '/delete', id)
       .subscribe(
         ()  => {
           this.getSchools();
-          console.log('Delete ');
+          alert('delete school');
         },
         error  => {
           console.log('Error ', error);
         }
-      );
+      );*/
   }
 
   updateSchool(school: School) {

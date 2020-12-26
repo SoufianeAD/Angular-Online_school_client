@@ -11,4 +11,5 @@ export class Professor {
   phone: string;
   email: string;
   account: Account;
+  constructor(){}
 }

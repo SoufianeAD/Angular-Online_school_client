@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <h3>Devoir: {{ currentHomework.title }}</h3>
+    <div class="col-md-7">
+        <h3>Homework Files</h3>
+        <div class="alert-info" style="padding: 5px; margin-top: 10px;" *ngFor="let item of files;">
+          {{ item.title }}
+          <button type="button" class="btn btn-light pull-right" (click)="onDownload(item.title)">download</button>
+        </div>
+    </div>
+    <div class="col-md-5">
+      <h3>Feed Backs</h3>
+      <input type="file" class="form-control" (change)="onUpload($event)" #documentFile style="display: none;"/>
+      <button type="button" class="btn btn-light border rounded" (click)="documentFile.click()">
+        Upload feedback <i class="fa fa-file lg" aria-hidden="true"></i>
+      </button>
+
+      <div class="alert-info" style="padding: 5px; margin-top: 10px;" *ngFor="let item of feedBackFiles;">
+        {{ item.title }}
+        <button type="button" class="btn btn-light pull-right" (click)="onDownloadFeedBackFile(item.title)">download</button>
+        <button type="button" class="btn btn-light pull-right" (click)="onDelete(item.id)">del</button>
+      </div>
+    </div>
+  </div>
+</div>

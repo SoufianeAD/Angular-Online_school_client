@@ -44,7 +44,6 @@ export class CreateClassroomComponent implements OnInit {
     const classroom = new ClassRoom();
     classroom.name = this.createForm.get('title').value;
     classroom.level = this.createForm.get('level').value;
-    classroom.school = this.createForm.get('school').value;
     this.classRoomService.createNewClassRoom(classroom);
     this.router.navigate(['/classroom/list']);
   }

@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
 import ObjectID from 'bson-objectid';
 import {School} from './School.module';
-import {logging} from 'selenium-webdriver';
-import Level = logging.Level;
+import {Homework} from './Homework.module';
 
 @NgModule()
-export class ClassRoom {
+export class Level {
+
   id: ObjectID;
-  name: string;
-  level: Level;
+  title: string;
+  school: School;
   constructor(){}
 }

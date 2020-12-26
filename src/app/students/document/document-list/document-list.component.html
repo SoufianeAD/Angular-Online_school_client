@@ -1,0 +1,9 @@
+<div class="container col-md-8 mx-auto mt-5 ">
+  <h3>Liste des documents</h3>
+
+  <div class="alert-info" style="padding: 5px; margin-top: 10px;" *ngFor="let item of documents;">
+    {{ item.title }}
+    <button type="button" class="btn btn-light pull-right" (click)="onDetails(item)">files</button>
+  </div>
+
+</div>

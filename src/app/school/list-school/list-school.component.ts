@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {School} from '../../models/School.module';
 import {Subscription} from 'rxjs';
 import {SchoolService} from '../../services/school.service';
+import ObjectID from 'bson-objectid';
 
 @Component({
   selector: 'app-list-school',
@@ -20,6 +21,10 @@ export class ListSchoolComponent implements OnInit {
       }
     );
     this.schoolService.getSchools();
+  }
+
+  onDelete(id: ObjectID) {
+    this.schoolService.deleteSchool(id);
   }
 
 }

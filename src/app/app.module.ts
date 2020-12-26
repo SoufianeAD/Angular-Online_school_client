@@ -16,9 +16,21 @@ import { ListSchoolComponent } from './school/list-school/list-school.component'
 import { ListAdministratorComponent } from './administrator/list-administrator/list-administrator.component';
 import { CreateAdministratorComponent } from './administrator/create-administrator/create-administrator.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from '@angular/common/http';
 import { CreateClassroomComponent } from './classroom/create-classroom/create-classroom.component';
 import { ListClassroomComponent } from './classroom/list-classroom/list-classroom.component';
+import {FileService} from './services/file.service';
+import { ListDocumentComponent } from './document/list-document/list-document.component';
+import {DocumentService} from './services/document.service';
+import { DocumentDetailsComponent } from './document/details-document/document-details.component';
+import { ListHomeworkComponent } from './homework/list-homework/list-homework.component';
+import { DetailsHomeworkComponent } from './homework/details-homework/details-homework.component';
+import {HomeworkService} from './services/homework.service';
+import { HomeworkListComponent } from './students/homework/homework-list/homework-list.component';
+import { HomeworkDetailsComponent } from './students/homework/homework-details/homework-details.component';
+import { DocumentListComponent } from './students/document/document-list/document-list.component';
+import { StudentsDocumentDetailsComponent } from './students/document/students-document-details/students-document-details.component';
+import {FeedBackService} from "./services/feed-back.service";
 
 @NgModule({
   declarations: [
@@ -29,6 +41,14 @@ import { ListClassroomComponent } from './classroom/list-classroom/list-classroo
     CreateAdministratorComponent,
     CreateClassroomComponent,
     ListClassroomComponent,
+    ListDocumentComponent,
+    DocumentDetailsComponent,
+    ListHomeworkComponent,
+    DetailsHomeworkComponent,
+    HomeworkListComponent,
+    HomeworkDetailsComponent,
+    DocumentListComponent,
+    StudentsDocumentDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +64,11 @@ import { ListClassroomComponent } from './classroom/list-classroom/list-classroo
     ProfessorService,
     SchoolService,
     SessionService,
-    StudentService
+    StudentService,
+    FileService,
+    DocumentService,
+    HomeworkService,
+    FeedBackService
   ],
   bootstrap: [AppComponent]
 })

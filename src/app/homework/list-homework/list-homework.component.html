@@ -1,0 +1,30 @@
+<div class="container col-md-8 mx-auto mt-5 ">
+  <h3>Liste des devoirs</h3>
+
+  <form [formGroup]="createForm" (submit)="onSubmit()">
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" formControlName="title" style="display: inline-block;">
+      <div class='input-group date' id='datetimepicker1'>
+        <input type='text' class="form-control" />
+        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+      </div>
+      <script type="text/javascript">
+        $(function () {
+          $('#datetimepicker1').datetimepicker();
+        });
+      </script>
+      <button type="submit" class="btn btn-primary" style="display: inline-block; margin-right: 5px;">Create homework</button>
+    </div>
+  </form>
+
+  <div class="alert-info" style="padding: 5px; margin-top: 10px;" *ngFor="let item of homeworks;">
+    {{ item.title }}
+    <button type="button" class="btn btn-light pull-right" (click)="onDelete(item)">del</button>
+    <button type="button" class="btn btn-light pull-right" (click)="onDetails(item)">files</button>
+
+  </div>
+
+</div>

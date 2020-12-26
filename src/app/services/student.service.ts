@@ -42,7 +42,7 @@ export class StudentService {
     );
   }
 
-  getStudentById(id: ObjectID) {
+  getStudentById(id: number) {
     const student = this.students.find(
       (s) => {
         return s.id === id;
@@ -50,7 +50,7 @@ export class StudentService {
     );
     return student;
   }
-  deleteStudent(id: ObjectID) {
+  deleteStudent(id: number) {
     const index = this.students.indexOf(this.getStudentById(id));
     this.students.splice(index, 1);
     this.emitStudentSubject();
@@ -83,5 +83,9 @@ export class StudentService {
   getStudentList() {
     this.getStudents();
     return this.students;
+  }
+
+  getStudentByIdApi(id: number) {
+    return this.http.get<Student>(this.url + '/getById/' + id);
   }
 }

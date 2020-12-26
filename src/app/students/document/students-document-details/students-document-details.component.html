@@ -1,0 +1,7 @@
+<div class="container col-md-6 mx-auto mt-5 ">
+  <h3>Document: {{ currentDocument.title }}</h3>
+  <div class="alert-info" style="padding: 5px; margin-top: 10px;" *ngFor="let item of files;">
+    {{ item.title }}
+    <button type="button" class="btn btn-light pull-right" (click)="onDownload(item.title)">download</button>
+  </div>
+</div>
